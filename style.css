@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; 
+    color: #d4af37; 
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background-color: rgba(13, 13, 13, 0.9); /* Semi-transparent Black */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo {
+    font-size: 2.5rem; /* Increased size for a bold, elegant statement */
+    font-weight: 600; /* Semi-bold for a more refined look */
+    text-transform: uppercase; 
+    font-family: 'Playfair Display', serif; /* Classy serif font */
+    letter-spacing: 0.1rem; /* Adds spacing for a more luxurious feel */
+    color: #d4af37; /* Gold to maintain luxury */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Aligns navigation items to the right */
+}
+
+nav ul li {
+    margin-left: 2.5rem; /* Slightly increased spacing between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d4af37; /* Soft Off-White for readability and elegance */
+    font-family: 'Lora', serif; /* Professional serif font for a classy touch */
+    font-weight: 500; /* Semi-bold for refined look */
+    letter-spacing: 0.05rem; /* Slight letter spacing for elegance */
+    text-transform: uppercase; /* Makes the nav items look more structured */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+    padding-bottom: 0.2rem; /* Adds spacing for a hover underline effect */
+    border-bottom: 2px solid transparent; /* Hidden border for hover effect */
+}
+
+nav ul li a:hover {
+    color: #d4af37; /* Gold hover effect to match the logo */
+    border-bottom: 1ex solid #0d0d0d; /* Classy gold underline on hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #af9643, #9c9b7c); /* Rich, deep greys */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f5f5f5; /* Soft Off-White */
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5; /* Gold */
+}
+
+.hero p {
+    margin: 2.5rem 0;
+}
+
+.hero .btn {
+    background-color: #d4af37;
+    color: #0d0d0d; 
+    padding: 1rem 2.5rem; 
+    border: 2px solid #d4af37; 
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600; 
+    letter-spacing: 0.05rem; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 500rem;
+}
+
+.hero .btn:hover {
+    background-color: #0d0d0d; /* Switch to black on hover */
+    color: #d4af37; /* Gold text on hover */
+    border: 2px solid #d4af37; /* Maintain gold border */
+}
+
+
+/* Shop Section with Grid */
+.collection-grid {
+    padding: 3rem 1rem; /* Increased padding for a more spacious layout */
+    background-color: #1a1a1a; /* Dark Grey for a sophisticated backdrop */
+    text-align: center;
+    border-top: 3px solid #0d0d0d; /* Gold border at the top for a classy touch */
+}
+
+.collection-grid h2 {
+    font-size: 3rem; /* Increased size for prominence */
+    margin-bottom: 2rem;
+    color: #d4af37; /* Gold color for the heading to stand out */
+    font-weight: 600; /* Semi-bold for elegance */
+    letter-spacing: 0.05rem; /* Slight letter spacing for refinement */
+    text-transform: uppercase; /* Makes the heading structured and classy */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min width for better layout */
+    gap: 0.05rem; /* Increased gap for more breathing room between items */
+}
+
+
+.product {
+    background-color: #1a1a1a; /* Dark Grey */
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.product:hover {
+    background-color: #262626; /* Slightly lighter Grey */
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.product h3 {
+    color: #f5f5f5; /* Soft Off-White */
+}
+
+.product p {
+    color: #d4af37; /* Gold for the price */
+}
+
+/* About & Contact Section */
+.about-section, .contact-section {
+    padding: 5rem 2rem; 
+    background-color: #1a1a1a; 
+    text-align: center;
+    border-top: 5px solid #0d0d0d; 
+    border-bottom: 5px solid #0d0d0d; 
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 3rem; 
+    margin-bottom: 1.5rem;
+    color: #d4af37; 
+    font-weight: 600; 
+    letter-spacing: 0.05rem; 
+    text-transform: uppercase;
+}
+
+.about-section p, .contact-section p {
+    font-size: 1.2rem;
+    color: #f5f5f5; 
+    margin-bottom: 2rem; 
+    max-width: 800px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+footer {
+    padding: 2rem;
+    background-color: rgba(13, 13, 13, 0.9);
+    text-align: center;
+}
+
+footer p {
+    color: #f5f5f5;
+    font-size: 1rem; 
+}
+
+/* Transition Effects for Sections */
+section {
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    opacity: 0.95; 
+    transform: translateY(0); 
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+

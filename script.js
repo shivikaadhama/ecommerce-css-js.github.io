@@ -10,7 +10,35 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const sections = document.querySelectorAll('section');
+
+        // Highlight the active navigation link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.classList.remove('active');
+        });
+        this.classList.add('active');
+
+        // Add a fade-in effect to the target section
+        targetSection.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        targetSection.style.opacity = '0';
+        targetSection.style.transform = 'translateY(20px)';
+
+        setTimeout(() => {
+            targetSection.style.opacity = '1';
+            targetSection.style.transform = 'translateY(0)';
+        }, 100);
+        const offset = 50; // Adjust this value to fine-tune the scroll position
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+
+        // Reset background color after scrolling
+        setTimeout(() => {
+            document.body.style.backgroundColor = '';
+        }, 800); // Adjust timeout to match scroll duration
     });
 });
 

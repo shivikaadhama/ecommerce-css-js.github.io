@@ -2,13 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000000; 
-    color: #d4af37; 
-    overflow-x: hidden;
+    font-family: 'Playfair Display', serif; 
+    line-height: 1.6; /* Improved readability */
 }
 
 /* Header */
@@ -16,8 +11,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3rem;
-    background-color: rgba(13, 13, 13, 0.9); /* Semi-transparent Black */
-    position: fixed;
+    background-color: rgba(13, 13, 13, 0.982); /* Semi-transparent Black */
+    position:relative;
     width: 100%;
     z-index: 10;
 }
@@ -33,7 +28,7 @@ header .logo {
 
 nav ul {
     display: flex;
-    list-style: none;
+    list-style: lower-latin;
     justify-content: flex-end; /* Aligns navigation items to the right */
 }
 
@@ -50,13 +45,16 @@ nav ul li a {
     text-transform: uppercase; /* Makes the nav items look more structured */
     transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
     padding-bottom: 0.2rem; /* Adds spacing for a hover underline effect */
-    border-bottom: 2px solid transparent; /* Hidden border for hover effect */
+    border-bottom: none; /* Hidden border for hover effect */
+}
+nav ul li a:hover {
+    background: linear-gradient(135deg, #d2bf81, #1a1a1a); /* Gradient with gold and dark grey */
+    color: #000000bf; /* Bright gold for a striking hover effect */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #d4af37; /* Gold hover effect to match the logo */
-    border-bottom: 1ex solid #0d0d0d; /* Classy gold underline on hover */
-}
 
 /* Hero Section */
 .hero {
@@ -93,13 +91,18 @@ nav ul li a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-top: 500rem;
 }
-
 .hero .btn:hover {
-    background-color: #0d0d0d; /* Switch to black on hover */
-    color: #d4af37; /* Gold text on hover */
-    border: 2px solid #d4af37; /* Maintain gold border */
+    background: linear-gradient(135deg, #d4af37, #0d0d0d); /* Gradient hover effect with gold and black */
+    color: #ffffff; /* White text for contrast */
+    border: 2px solid ; /* Gold border */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 15px #d4af37; /* Subtle gold glow effect */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-width 0.3s ease; /* Smooth transitions */
+    border-width: 1px; /* Border expansion on hover */
+    border: none; /* Remove border for a cleaner look */
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
-
 
 /* Shop Section with Grid */
 .collection-grid {
@@ -201,4 +204,3 @@ section.visible {
     opacity: 1;
     transform: translateY(0); 
 }
-

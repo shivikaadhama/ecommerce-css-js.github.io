@@ -29,6 +29,8 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         }, 100);
         const offset = 50; // Adjust this value to fine-tune the scroll position
         const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset;
+        document.body.style.backgroundColor = 'black';
+        setTimeout(() => {
 
         window.scrollTo({
             top: targetPosition,
@@ -78,8 +80,6 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, { threshold: 0.1 });
-
 sections.forEach(section => {
     observer.observe(section);
 });

@@ -16,3 +16,11 @@ Technologies Used
 HTML: Structuring the website.
 CSS: Styling, animations, and layout management.
 JavaScript: Handling dynamic features such as sticky header and dimensional scroll effect.
+
+![handbag](https://github.com/user-attachments/assets/1be7dcef-8872-4e68-898c-cc22fe8a8b7c)
+![DIR-Bags](https://github.com/user-attachments/assets/39f8d4be-6312-40f9-8a84-5ee7b6357736)
+![luxe bag](https://github.com/user-attachments/assets/392180ba-0ead-45ca-97e9-5803fa15c8ac)
+![printed luxe bag](https://github.com/user-attachments/assets/6897e27b-98bb-4792-9bfa-31752f4de357)
+
+
+
